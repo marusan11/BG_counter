@@ -11,10 +11,15 @@
 |
 */
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::namespace('Top')->group(function () {
-    Route::get('/', 'TopPageController@showTop')->name('top.show');
+Route::get('/', 'TopPageController@show')->name('top.show');
+
+Route::group(['middlware' => 'auth'], function() {
+        Route::get('game', 'GameController@show')->name('game.show');
+        Route::get('game/create', 'GameController@create')->name('game.create');
+        Route::post('game/create', 'GameController@store')->name('game.store');
 });
