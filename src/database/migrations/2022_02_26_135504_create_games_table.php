@@ -17,10 +17,6 @@ class CreateGamesTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->integer('good_level');
-            $table->integer('number');
-            $table->integer('time_required');
-            $table->integer('count');
             $table->text('comment');
             $table->timestamps();
 

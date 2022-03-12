@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Top;
+namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class TopPageController extends Controller
 {
-    public function showTop()
+    public function show()
     {
         return view('top.top');
     }
