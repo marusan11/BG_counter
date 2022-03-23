@@ -12,7 +12,7 @@ class Game extends Model
     // 可変項目
     protected $fillable =
     [
-        'user_id', 'name', 'good_level', 'number', 'time_required', 'count', 'comment',
+        'user_id', 'name', 'comment',
     ];
 
     public function user()
